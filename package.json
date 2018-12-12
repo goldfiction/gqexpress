@@ -1,7 +1,7 @@
 {
   "name": "gqexpress",
   "main":"main.js",
-  "description":"``` gqexpress is a simple to use wrapper for express.js. \n``` To use it, use app.use(gqexpress.use()). \n``` See test/ for advanced usages.",
+  "description":"``` gqexpress is a simple to use wrapper for express.js. \n``` To use it, use gqexpress.startServer(o,cb). \n``` See test/ for advanced usages.",
   "license":"Apache-2.0",
   "version": "1.0.0",
   "repository":"git@github.com:goldfiction/gqexpress.git",
