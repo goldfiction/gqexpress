@@ -154,7 +154,7 @@
       o.message += "\n" + fs.readFileSync(config.server.motd).toString() + "\n";
     } catch (_error) {
       e = _error;
-      error(e);
+      debug(e);
     }
     o.message += "\n public IP: " + o.publicIp;
     o.message += "\n private IP: " + ip.address();

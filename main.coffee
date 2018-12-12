@@ -1,4 +1,4 @@
-express=require "express"
+express = require "express"
 session = require "express-session"
 basicAuth = require "express-basic-auth"
 FileStore = require("session-file-store")(session)
@@ -15,7 +15,7 @@ bodyParser = require 'body-parser'
 cookieSession = require 'cookie-session'
 methodOverride = require 'method-override'
 gqemail = require 'gqemail'
-_=require "underscore"
+_ = require "underscore"
 
 log = console.log
 debug = console.error||util.debug
@@ -126,7 +126,7 @@ server=(o,cb)->
   try
     o.message += "\n"+fs.readFileSync(config.server.motd).toString()+"\n"
   catch e
-    error e
+    debug e
 
   o.message += "\n public IP: "+o.publicIp
   o.message += "\n private IP: "+ip.address()
