@@ -8,6 +8,6 @@
                                                 License: Apache-2.0
 
 gqexpress is a simple to use wrapper for express.js. 
-To use it, use app.use(gqexpress.use()). 
+To use it, use gqexpress.startServer(o,cb)
 See test/ for advanced usages.
 ```
