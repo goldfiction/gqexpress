@@ -15,7 +15,7 @@ bodyParser = require 'body-parser'
 cookieSession = require 'cookie-session'
 methodOverride = require 'method-override'
 gqemail = require 'gqemail'
-_ = require "underscore"
+_ = require "lodash"
 
 log = console.log
 debug = console.error||util.debug
@@ -63,7 +63,7 @@ defaultO=  # default setting, changes to this object should be in o being passed
 
 server=(o,cb)->
   o=o||{}
-  o=_.extend(defaultO,o)  #o is defaultO overwritten by incoming o
+  o=_.merge(defaultO,o)  #o is defaultO overwritten by incoming o
   config=o.config
 
   gqemail.setServer o.config.emailserver

@@ -36,7 +36,7 @@
 
   gqemail = require('gqemail');
 
-  _ = require("underscore");
+  _ = require("lodash");
 
   log = console.log;
 
@@ -94,7 +94,7 @@
   server = function(o, cb) {
     var config, e, errorHandle, secret, startTime;
     o = o || {};
-    o = _.extend(defaultO, o);
+    o = _.merge(defaultO, o);
     config = o.config;
     gqemail.setServer(o.config.emailserver);
     errorHandle = function(err) {
